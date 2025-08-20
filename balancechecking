@@ -1,0 +1,39 @@
+import java.util.HashMap;
+import java.util.Map;
+
+// Class to represent an Account with name and balance
+class Account {
+    private String name;
+    private double balance;
+
+    public Account(String name, double balance) {
+        this.name = name;
+        this.balance = balance;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+
+// Main BalanceChecking class
+public class BalanceChecking {
+    private Map<String, Account> accounts;
+
+    // Constructor initializes account data
+    public BalanceChecking() {
+        accounts = new HashMap<>();
+
+        // Sample data: account number -> Account(name, balance)
+        accounts.put("1234567890", new Account("Alice Smith", 5000.0));
+        accounts.put("9876543210", new Account("Bob Johnson", 12000.5));
+        accounts.put("5555555555", new Account("Carol White", 750.25));
+    }
+
+    // Method to check account details
+    public void checkBalance(String accountNumber) {
+        
